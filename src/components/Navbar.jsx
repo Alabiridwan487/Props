@@ -2,14 +2,15 @@ import React from 'react'
 import { CiBellOn } from "react-icons/ci";
 import { RxAvatar } from "react-icons/rx";
 import { CiSearch } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className='h-[50px] shadow flex justify-between items-center px-10'>
         <div className='flex items-center'>
-            <div>
+            <Link to='/'>
                 <img src="./caerus_logo.png.png" alt="" className='Logo'/>
-            </div>
+            </Link>
 
             <div className='flex items-center bg-gray-100 rounded p-1 ms-4'>
             <CiSearch />
