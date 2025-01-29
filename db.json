@@ -1,0 +1,41 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "My first blog",
+      "content": "This is the content of my first blog",
+      "author": "Olakitan"
+    },
+    {
+      "id": "b48c",
+      "title": "Mr",
+      "content": "This is the content of my first blog",
+      "author": "Ayokunle"
+    },
+    {
+      "id": "efec",
+      "title": "Business man",
+      "content": "Are you available ?",
+      "author": "Abidemi"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Alabi Olakitan",
+      "email": "yungridofficial@gmail.com",
+      "phonenumber": 8086623211,
+      "password": "password",
+      "address": "yaba"
+    },
+    {
+      "id": "64bf",
+      "fullName": "rtghjklj",
+      "email": "alabiridolakitan487@gmail.com",
+      "number": "435678",
+      "address": "Yaba",
+      "age": "455",
+      "password": "456ryfhgvnm"
+    }
+  ]
+}

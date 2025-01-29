@@ -7,21 +7,50 @@ const Create = () => {
     const [image, setImage] = useState(null)
     const [author, setAuthor] = useState('')
 
-    const handleImageChange = (e) => {
-        setImage(e.target.files[0]);
-    };
+    const [isLoading, setIsLoading] = useState (false)
+
+    // const handleImageChange = (e) => {
+    //     setImage(e.target.files[0]);
+    // };
     
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
         
-        // Form submission logic, e.g., uploading data to an API
-        console.log({ title, content, image, author });
+    //     // Form submission logic, e.g., uploading data to an API
+    //     console.log({ title, content, image, author });
     
-        setTitle('');
-        setContent('');
-        setImage(null);
-        setAuthor('');
-      };
+    //     setTitle('');
+    //     setContent('');
+    //     setImage(null);
+    //     setAuthor('');
+    //   };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const blog = {title, content, author}
+
+        try{
+            const response = await fetch('http://localhost:8000/blogs',{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(blog)
+
+            })
+            if (!response.ok) {
+                throw new Error("failed to submit blog")
+                
+            }
+            setTitle("")
+            setContent("")
+            setAuthor("")
+            alert("blog submitted successfully")
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
 
 
     return (
